@@ -1,17 +1,16 @@
 import React from 'react'
-import importImages from '../ImportImages'
+import importImages from '../utils/ImportImages'
 
 function Eyes({ changeEyes }) {
   const images = importImages(
-    require.context('../assets/alpaca/eyes', false, /\.png/)
+    require.context('../images/eyes', false, /\.png/)
   )
   const eyes = [
     'default.png', 'angry.png', 'naughty.png',
     'panda.png', 'smart.png', 'star.png'
   ]
   return (
-    <div>
-      <h4>Eyes</h4>
+    <div className='grid-3x3-buttons'>
       {
         eyes.map(
           eye => <button key={eye} onClick={() => changeEyes(images[eye])}>

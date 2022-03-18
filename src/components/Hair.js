@@ -1,17 +1,16 @@
 import React from 'react'
-import importImages from '../ImportImages'
+import importImages from '../utils/ImportImages'
 
 function Hair({ changeHair }) {
   const images = importImages(
-    require.context('../assets/alpaca/hair', false, /\.png/)
+    require.context('../images/hair', false, /\.png/)
   )
   const hairs = [
-    'default.png', 'bang.png', 'curls.png', 'elegant.png', 
-    'fancy.png', 'quiff.png', 'short.png'
+    'default.png', 'bang.png', 'curls.png',
+    'elegant.png', 'quiff.png', 'short.png'
   ]
   return (
-    <div>
-      <h4>Hair</h4>
+    <div className='grid-3x3-buttons'>
       {
         hairs.map(
           hair => <button key={hair} onClick={() => changeHair(images[hair])}>

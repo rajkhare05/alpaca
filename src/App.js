@@ -1,12 +1,14 @@
-import Avatar from "./components/Avatar";
+import Avatar from "./components/Avatar"
 
 function App() {
   return (
     <div className="App">
-      <center><h1>Alpaca</h1></center>
-      <Avatar></Avatar>
+      <header>
+        ALPACA GENERATOR
+      </header>
+      <Avatar />
     </div>
   );
 }
 
-export default App;
+export default App

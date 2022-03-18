@@ -1,17 +1,16 @@
 import React from 'react'
-import importImages from '../ImportImages'
+import importImages from '../utils/ImportImages'
 
 function Mouth({ changeMouth }) {
   const images = importImages(
-    require.context('../assets/alpaca/mouth', false, /\.png/)
+    require.context('../images/mouth', false, /\.png/)
   )
   const mouths = [
-    'default.png', 'astonished.png', 
+    'default.png', 'astonished.png',
     'eating.png', 'laugh.png', 'tongue.png'
   ]
   return (
-    <div>
-      <h4>Mouth</h4>
+    <div className='grid-3x3-buttons'>
       {
         mouths.map(
           mouth => <button key={mouth} onClick={() => changeMouth(images[mouth])}>

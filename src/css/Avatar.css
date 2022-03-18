@@ -1,0 +1,75 @@
+header {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 1vh 0 0 35vw;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 35px;
+}
+
+#alpaca-avatar {
+    width: 490px;
+    height: 490px;
+}
+
+.left-pane {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left-pane-buttons {
+    margin-top: 15px;
+}
+
+.right-pane {
+    display: flex;
+    flex-direction: column;
+}
+
+#subheading1 {
+    margin-top: 0;
+}
+
+.right-pane .box1 button {
+    width: 100px;
+    height: 40px;
+}
+
+.grid-3x3-buttons, .right-pane .box1 {
+    display: grid;
+    grid-template-columns: 110px 110px 110px;
+    grid-template-rows: auto auto auto;
+    gap: 5px 5px;
+}
+
+.grid-2x2-buttons, .left-pane-buttons {
+    display: grid;
+    grid-template-columns: 110px 110px;
+    grid-template-rows: auto auto;
+    align-items: center;
+    gap: 5px 5px;
+}
+
+.grid-3x3-buttons button, .grid-2x2-buttons button, .left-pane-buttons button, .box1 button {
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 20px;
+    border-color: rgb(54, 191, 245);
+    transition-duration: 0.35s;
+    background-color: white;
+    font-size: 14px;
+    width: 100px;
+    height: 40px;
+}
+
+.grid-3x3-buttons button:hover, .grid-2x2-buttons button:hover, 
+.left-pane-buttons button:hover, .box1 button:hover {
+    background-color: rgb(54, 191, 245);
+    color: white;
+    cursor: pointer;
+}

@@ -1,14 +1,13 @@
 import React from 'react'
-import importImages from '../ImportImages'
+import importImages from '../utils/ImportImages'
 
 function Ears({ changeEars }) {
   const images = importImages(
-    require.context('../assets/alpaca/ears', false, /\.png/)
+    require.context('../images/ears', false, /\.png/)
   )
   const ears = ['default.png', 'tilt-backward.png', 'tilt-forward.png']
   return (
-    <div>
-      <h4>Ears</h4>
+    <div className='grid-3x3-buttons'>
       {
         ears.map(
           ear => <button key={ear} onClick={() => changeEars(images[ear])}>

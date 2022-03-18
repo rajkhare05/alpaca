@@ -1,18 +1,17 @@
 import React from 'react'
-import importImages from '../ImportImages'
+import importImages from '../utils/ImportImages'
 
 function Leg({ changeLeg }) {
   const images = importImages(
-    require.context('../assets/alpaca/leg', false, /\.png/)
+    require.context('../images/leg', false, /\.png/)
   )
   const legs = [
-    'default.png', 'bubble-tea.png', 
-    'cookie.png', 'game-console.png', 
+    'default.png', 'bubble-tea.png',
+    'cookie.png', 'game-console.png',
     'tilt-backward.png', 'tilt-forward.png'
   ]
   return (
-    <div>
-      <h4>Leg</h4>
+    <div className='grid-3x3-buttons'>
       {
         legs.map(
           leg => <button key={leg} onClick={() => changeLeg(images[leg])}>
